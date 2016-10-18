@@ -1,0 +1,21 @@
+
+How to use dev_ctrl.py:
+     For example, if you open some terminal, you can try to operation check in the following way.
+
+        1.open 2 terminal window.(terminal_a, terminal_b)
+        2.a_terminal:
+            $ python3 /home/pi/sac/test_hello_world.py
+        3.b_terminal:
+            $ python3 dev_ctrl.py test_sacmax
+
+     If successed, the following message appeared on the console.
+
+        terminal_a:
+            test_hello_world.py: test_sacmax
+            Hello, world. sacmax is in hear!
+
+        terminal_b:
+            test_hello_world.py:
+            test_sacmax command successful!
+
+

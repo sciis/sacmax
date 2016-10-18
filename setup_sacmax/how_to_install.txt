@@ -1,0 +1,27 @@
+
+How to set up:
+    First, please input this command "sudo apt-get update", 
+    Second, please set this directory("setup_sacmax") in /home/pi
+
+    1. $ cd /home/pi/setup_sacmax
+    2. $ sudo sh install_nginx_sacmax.sh install
+    3. $ sudo sh install_python_uwsgi_sacmax.sh install
+    4, $ sudo sh install_python_uwsgi_sacmax.sh setapp
+    5, $ sudo sh install_python_pyserial_gpio_sacmax.sh install
+    
+How to check:
+    1.nginx:
+       $ sudo sh install_nginx_sacmax.sh check
+    2.uwsig:
+       $ sudo sh install_python_uwsgi_sacmax.sh check
+
+How to use web server:
+    1. $ sudo sh ctrl_webapp.sh (start/stop/restart)
+    2. try to access "http://(pi ip addresss)/"
+    
+    If "(pi ip address)/sample" is 502 error when you input command restart,
+    please try to input command stop and start.
+    
+How to control device:
+    Plase read consult /home/pi/how_to_test_dev_ctrl.txt.
+    
