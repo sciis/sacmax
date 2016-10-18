@@ -37,8 +37,10 @@
   ※IPアドレスのセットアップまでは終了させておいてください  
   ※事前に sudo apt-get update をしておいてください  
   
-  1.setup_sacmax.zipファイルを /home/pi上にダウンロードしてください(zipしていなくとも、ダウンロード先は /home/pi です)  
-  2.$ unzip setup_sacmax.zip (zipしてインストールしていなければ不要です)  
+  ここではsetup_sacmaxをzipファイル(setup_sacmax.zip)にした前提で説明をしています。PeaZipなど圧縮解凍アプリをご利用してください。またwin8以降の場合は新規作成から作成可能です。  
+  
+  1.setup_sacmax.zipファイルを /home/pi上にダウンロードしてください  
+  2.$ unzip setup_sacmax.zip   
   3.$ cd setup_sacmax  
   4.$ sudo sh install_nginx_sacmax.sh install  
   5.$ sudo sh install_python_uwsgi_sacmax.sh install  
