@@ -37,7 +37,7 @@
   ※IPアドレスのセットアップまでは終了させておいてください  
   ※事前に sudo apt-get update をしておいてください  
   
-  ここではsetup_sacmaxをzipファイル(setup_sacmax.zip)にした前提で説明をしています。PeaZipなど圧縮解凍アプリをご利用してください。またwin8以降の場合は新規作成から作成可能です。  
+  ここではsetup_sacmaxをzipファイル(setup_sacmax.zip)にした前提で説明をしています。PeaZipなど圧縮解凍アプリをご利用ください。またwin8以降の場合は新規作成から作成可能です。  
   
   1.setup_sacmax.zipファイルを /home/pi上にダウンロードしてください  
   2.$ unzip setup_sacmax.zip   
