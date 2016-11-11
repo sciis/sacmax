@@ -6,6 +6,12 @@
 #install nginx
 
 do_install(){
+
+    if test -e /usr/local/nginx/sbin/nginx; then
+        echo "nginx OK"
+        exit
+    fi
+
     cd /
      mkdir build
     cd build

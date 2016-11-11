@@ -36,8 +36,9 @@ def dev_ctrl(command):
     recv = exec_command(command)
     recv = recv.split(',')
     module_name = recv[0]
-    mesg = recv[1]
-    return render_template('sample_sacmax.html', module_name=module_name, mesg=mesg)
+    func_name = recv[1]
+    mesg = recv[2]
+    return render_template('sample_sacmax.html', module_name=module_name, func_name=func_name, mesg=mesg)
 
 if __name__ == "__main__":
     app.run()
