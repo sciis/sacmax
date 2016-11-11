@@ -6,7 +6,7 @@
   
 ## Description  
   sacmax を使用すると、webブラウザを介してwebカメラをコントロールすることが出来ます。またwebサーバのみセットアップすることもできます。そしてsacmaxを使用すると、そのカメラモジュールを簡単に作れます。つまり機能を考えることに使用者は集中することが出来ます。  
-  
+  ここではsacmax-core について記述します。  
   
 ##Requirement  
  Raspbian jessie lite (ver. September 2016)  
