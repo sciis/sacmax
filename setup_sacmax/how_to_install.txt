@@ -17,7 +17,7 @@ How to check:
 
 How to use web server:
     1. $ sudo sh ctrl_webapp.sh (start/stop/restart)
-    2. try to access "http://(pi ip addresss)/"
+    2. try to access "http://(RPi ip addresss)/"
     
     If "(pi ip address)/sample" is 502 error when you input command restart,
     please try to input command stop and start.
