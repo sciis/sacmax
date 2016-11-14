@@ -35,8 +35,7 @@
  ・nginx+uwsgi+flask  
     インストール後に同一ネットワーク上のPCからブラウザで以下のアドレスにアクセス  
      http://(Raspberry Pi のIPアドレス)/  
-     
-     アクセス後、"Check uwsgi & Flask"のリンクをクリックし、flask_test_pageに遷移すれば成功です。  
+    アクセス後、"Check uwsgi & Flask"のリンクをクリックし、flask_test_pageに遷移すれば成功です。  
   
  ・sacmax(コマンドラインから動作確認)  
      ターミナルを2つ開くなど、コマンドラインの画面を2つ用意してください(それぞれterminal_a、terminal_b とします)  
