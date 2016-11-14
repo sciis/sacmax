@@ -50,6 +50,19 @@
      あるいは以下のurlにアクセスしてください  
      http://(Raspberry Pi のIPアドレス)/device/test_sacmax  
   
+ ・gpio(コマンドラインから動作確認)  
+     ターミナルを2つ開くなど、コマンドラインの画面を2つ用意してください(それぞれterminal_a、terminal_b とします)  
+     $ cd /home/pi/max  
+     terminal_a:  
+        $ python3 /home/pi/sac/gpio_ctrl.py  
+     terminal_b:  
+        $ python3 /home/pi/max/dev_ctrl.py test_sacmax <pin12_on/pin12_off/pin12_stat>  
+        ※コマンドはいずれか一つを入力ください  
+  
+ ・gpio(Webページから動作確認)  
+     コマンドラインから確認の terminal_a のコマンドを打ち込んでから以下のURLにアクセスしてください。  
+     http://(Raspberry Pi のIPアドレス)/device/<pin12_on/pin12_off/pin12_stat>
+     ※コマンドはいずれか一つを入力してください
   
 ##Install  
   
