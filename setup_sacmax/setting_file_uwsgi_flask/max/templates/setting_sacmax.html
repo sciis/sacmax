@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Edit page</title>
+        <!--
+            contrib以降に挿入される.confファイルの編集用ページ
+        -->
+    </head>
+    <body>
+        <h1>Edit page</h1>
+        <h2>check your edit_status</h2>
+
+        <b><a href="/sample">sample</a>　　<b><br>
+
+        {% for list in conf_list: %}
+            <b><a href={{list}}>{{list}}</a>　　</b>
+        {% endfor %}
+        <br>
+
+        {% if conf_name == "no_select" %}
+            <h2>Select config_file!</h2>
+        {% elif mesg == None %}
+            <h2>Edit {{ conf_name }}</h2>
+        {% elif mesg == "Succeeded" or mesg == "Failed" %}
+            <h2>Edit {{ conf_name }} is {{ mesg }}</h2>
+        {% else %}
+            <h2>ERROR : {{ mesg }}</h2>
+        {% endif %}
+
+        {% if mesg == "Succeeded" or mesg == "Failed" or mesg == None %}
+            <form method="post" action={{ "/conf_edit/" + conf_name}}>
+            <textarea name="conf_data" rows="30" cols="70" style="font-size:150%;" >{{ json_data }}</textarea>
+            <br>
+            <input type="submit" value="Update">
+            </form>
+        {% else %}
+            <textarea name="conf_data" rows="30" cols="70" readonly="readonly" style="font-size:150%;" >{{ json_data }}</textarea>
+        {% endif %}
+
+
+    </body>
+</html>

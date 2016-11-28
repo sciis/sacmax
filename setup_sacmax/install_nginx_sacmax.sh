@@ -12,14 +12,8 @@ do_install(){
         exit
     fi
 
-    cd /
-     mkdir build
-    cd build
-
-     wget http://nginx.org/download/nginx-1.9.3.tar.gz
-     tar zxvf nginx-1.9.3.tar.gz
-
-    cd nginx-1.9.3
+    cd setting_file_nginx/nginx-1.10.2
+    chmod 755 ./configure
 
      apt-get install libpcre3-dev libpcre++-dev libgd2-xpm-dev libgeoip-dev libxml2-dev libxslt-dev libssl-dev -y
 
@@ -49,7 +43,8 @@ do_install(){
     --with-http_xslt_module \
     --with-ipv6 \
     --with-sha1=/usr/include/openssl \
-    --with-md5=/usr/include/openssl 
+    --with-md5=/usr/include/openssl \
+    --add-module=../nginx-rtmp-module
 
      make
     # ./objs/nginx -V
@@ -63,13 +58,13 @@ do_install(){
 
     #nginx.conf move
     cd /home/pi/setup_sacmax
-     cp setting_file_nginx/nginx.conf /etc/nginx/
+    cp setting_file_nginx/nginx.conf /etc/nginx/
     #init.d nginx move
-     cp setting_file_nginx/nginx /etc/init.d/
-    #link sacmax.conf
-     cp setting_file_nginx/sacmax.conf /etc/nginx/sites-available
-    ln -s /etc/nginx/sites-available/sacmax.conf /etc/nginx/sites-enabled/
-    #www move
+    cp setting_file_nginx/nginx /etc/init.d/
+    #link http_sacmax.conf
+     cp setting_file_nginx/http_sacmax.conf /etc/nginx/sites-available
+    ln -s /etc/nginx/sites-available/http_sacmax.conf /etc/nginx/sites-enabled/
+    #www cp
     cp -r setting_file_nginx/www /home/pi/
 }
 
